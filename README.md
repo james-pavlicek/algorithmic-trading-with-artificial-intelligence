@@ -3,9 +3,12 @@
 ## Overview
 This research project was conducted by James Pavlicek, Jack Burt, and Andrew Hocher. We would like to thank and acknowledge our professor, Tahir Ekin Ph.D., for his guidance and expertise throughout our project.
 
-Contact Info
+Contact Info:
+
 James Pavlicek: https://www.linkedin.com/in/jamespavlicek/ 
+
 Jack Burt: https://www.linkedin.com/in/jackburt2/ 
+
 Andrew Hocher: https://www.linkedin.com/in/andrew-hocher/ 
 
 Link to our official research poster: https://github.com/james-pavlicek/algorithmic-trading-with-artificial-intelligence/blob/main/AI_for_algorithmic_trading_poster.pdf 

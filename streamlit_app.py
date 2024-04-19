@@ -674,7 +674,7 @@ if st.session_state['option'] and st.session_state['stock_selected']:
     my_bar.progress(98, text='Simulating Trade Performance')
     
     ticker_save_for_later = ticker
-    buy_or_short = meta_prediction[0]
+    buy_or_short = meta_prediction
     tickers = [ticker, "VTI"]
     
     # set start date file_date. Trade for 7 days.

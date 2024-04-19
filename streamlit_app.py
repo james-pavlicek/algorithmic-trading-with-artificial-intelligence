@@ -649,8 +649,8 @@ if st.session_state['option'] and st.session_state['stock_selected']:
 
     df = pd.DataFrame([row_1], columns=columns)
     meta_prediction = meta_naive_bayes_model.predict(df)
-    
-    if meta_prediction[0] > 1:
+    print(meta_prediction)
+    if meta_prediction[0] > 0:
         string = "Positive"
         color = "green"
     else:

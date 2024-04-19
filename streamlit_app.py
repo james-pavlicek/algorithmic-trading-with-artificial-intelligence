@@ -649,11 +649,12 @@ if st.session_state['option'] and st.session_state['stock_selected']:
     st.markdown(row_1)
 
     df = pd.DataFrame([row_1], columns=columns)
-    st.markdown(df)
+    
     meta_prediction = meta_naive_bayes_model.predict(df)
 
     meta_prediction = meta_prediction[0]
     meta_prediction = int(meta_prediction)
+    st.markdown(meta_prediction)
     
     if meta_prediction > 0:
         string = "Positive"

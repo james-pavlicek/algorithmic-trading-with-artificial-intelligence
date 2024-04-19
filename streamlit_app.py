@@ -649,7 +649,8 @@ if st.session_state['option'] and st.session_state['stock_selected']:
 
     df = pd.DataFrame([row_1], columns=columns)
     meta_prediction = meta_naive_bayes_model.predict(df)
-    if meta_prediction == "1":
+    
+    if meta_prediction[0] > 1:
         string = "Positive"
         color = "green"
     else:
@@ -788,7 +789,7 @@ if st.session_state['option'] and st.session_state['stock_selected']:
     
     st.subheader("Documentation")
     st.markdown(f'10k Document Source: {URL_text_to_display}')
-    pdf_of_poster = "https://www.bit.ly/tenk-analysis-with-ai"
+    pdf_of_poster = "https://www.bit.ly/trading-ai-poster"
     st.markdown(f'Link to the Full Analysis: : {pdf_of_poster}')
 
     st.divider()          

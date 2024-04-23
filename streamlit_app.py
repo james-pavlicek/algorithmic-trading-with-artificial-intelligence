@@ -675,6 +675,32 @@ if st.session_state['option'] and st.session_state['stock_selected']:
     meta_prediction = meta_naive_bayes_model.predict(df)
     st.markdown(meta_prediction)
 
+
+    #--------------
+    row_2 = [0,1,0]
+    df = pd.DataFrame([row_2], columns=columns)
+    meta_prediction = meta_naive_bayes_model.predict(df)
+    st.markdown(meta_prediction)
+    
+    #--------------
+    row_2 = [0,0,1]
+    df = pd.DataFrame([row_2], columns=columns)
+    meta_prediction = meta_naive_bayes_model.predict(df)
+    st.markdown(meta_prediction)
+
+    #--------------
+    row_2 = [1,0,0]
+    df = pd.DataFrame([row_2], columns=columns)
+    meta_prediction = meta_naive_bayes_model.predict(df)
+    st.markdown(meta_prediction)
+
+
+    #--------------
+    row_2 = [0,0,0]
+    df = pd.DataFrame([row_2], columns=columns)
+    meta_prediction = meta_naive_bayes_model.predict(df)
+    st.markdown(meta_prediction)
+
     #--------------
 
     meta_prediction = meta_prediction[0]

@@ -646,15 +646,40 @@ if st.session_state['option'] and st.session_state['stock_selected']:
 
     columns = ["Random_Forest_CV_pred", "XGBoost_CV_TF_IDF_pred", "Naive_Bayes_CV_pred"]
     row_1 = [int(first_prediction), int(third_prediction), int(fifth_prediction)]
-    #st.markdown(row_1)
+    st.markdown(row_1)
 
     df = pd.DataFrame([row_1], columns=columns)
-    
+
+    #--------------
+    row_2 = [1,1,1]
+    df = pd.DataFrame([row_2], columns=columns)
     meta_prediction = meta_naive_bayes_model.predict(df)
+    st.markdown(meta_prediction)
+
+    #--------------
+    row_2 = [1,0,1]
+    df = pd.DataFrame([row_2], columns=columns)
+    meta_prediction = meta_naive_bayes_model.predict(df)
+    st.markdown(meta_prediction)
+
+    #--------------
+    row_2 = [0,1,1]
+    df = pd.DataFrame([row_2], columns=columns)
+    meta_prediction = meta_naive_bayes_model.predict(df)
+    st.markdown(meta_prediction)
+
+
+    #--------------
+    row_2 = [1,1,0]
+    df = pd.DataFrame([row_2], columns=columns)
+    meta_prediction = meta_naive_bayes_model.predict(df)
+    st.markdown(meta_prediction)
+
+    #--------------
 
     meta_prediction = meta_prediction[0]
     meta_prediction = int(meta_prediction)
-    #st.markdown(meta_prediction)
+    st.markdown(meta_prediction)
     
     if meta_prediction > 0:
         string = "Positive"

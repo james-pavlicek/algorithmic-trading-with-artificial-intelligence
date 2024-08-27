@@ -68,6 +68,7 @@ def download_nltk_data():
     nltk.download('stopwords')
     nltk.download('punkt')
     nltk.download("words")
+    nltk.download('punkt_tab')
 
 download_nltk_data()
 
